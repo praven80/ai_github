@@ -1,0 +1,102 @@
+/* Base styles for the custom markdown renderer */
+.custom-markdown {
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+/* Remove excess margin from all elements */
+.custom-markdown * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Headings */
+.md-heading {
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+/* Make the first heading flush with the top */
+.custom-markdown > .md-heading:first-child {
+  margin-top: 0;
+}
+
+/* Paragraphs */
+.md-paragraph {
+  margin-bottom: 8px;
+}
+
+/* Lists */
+.md-list {
+  margin-top: 4px;
+  margin-bottom: 8px;
+  padding-left: 24px;
+}
+
+/* List items */
+.md-list-item {
+  margin: 0;
+  padding: 0;
+}
+
+/* Add minimal spacing between list items */
+.md-list-item + .md-list-item {
+  margin-top: 2px;
+}
+
+/* Make paragraphs in list items inline */
+.md-list-item > .md-paragraph {
+  margin: 0;
+  display: inline;
+}
+
+/* Code blocks */
+.custom-markdown pre {
+  margin: 8px 0;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.custom-markdown code {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 90%;
+}
+
+/* Blockquotes */
+.custom-markdown blockquote {
+  margin-left: 0;
+  padding-left: 16px;
+  border-left: 4px solid #e1e4e8;
+  color: #6a737d;
+}
+
+/* Tables */
+.custom-markdown table {
+  border-collapse: collapse;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.custom-markdown table th,
+.custom-markdown table td {
+  border: 1px solid #e1e4e8;
+  padding: 6px 12px;
+  text-align: left;
+}
+
+/* Fix spacing between sections */
+.md-heading + .md-list {
+  margin-top: 8px;
+}
+
+/* Numbered headings need special handling */
+.custom-markdown h1:first-child + .md-paragraph,
+.custom-markdown h2:first-child + .md-paragraph,
+.custom-markdown h3:first-child + .md-paragraph {
+  margin-top: 4px;
+}

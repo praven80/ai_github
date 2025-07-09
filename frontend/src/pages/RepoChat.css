@@ -1,0 +1,48 @@
+.repo-chat-page {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.repo-chat-container {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* Wider sidebar */
+  gap: 0;
+  height: calc(100vh - 80px);
+}
+
+.sidebar-panel {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e1e4e8;
+  background-color: #f6f8fa;
+  overflow: hidden;
+}
+
+.sidebar-panel .repo-info {
+  flex: 0 0 auto;
+}
+
+.sidebar-panel .conversation-history {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chat-panel {
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .repo-chat-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  
+  .sidebar-panel {
+    height: auto;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,88 @@
+.conversation-history {
+  padding: 15px 10px;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.conversation-history h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #0366d6;
+}
+
+.conversation-history h4, .conversation-history h5 {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #24292e;
+}
+
+.conversation-history h5 {
+  font-size: 14px;
+  color: #586069;
+}
+
+.conversation-history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.conversation-history li {
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border: 1px solid #e1e4e8;
+}
+
+.conversation-history li:hover {
+  background-color: #f1f8ff;
+}
+
+.conversation-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.conversation-title {
+  font-weight: 500;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.conversation-timestamp {
+  font-size: 12px;
+  color: #586069;
+}
+
+.conversation-history.loading,
+.conversation-history.error,
+.conversation-history.not-authenticated,
+.conversation-history.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 14px;
+  color: #586069;
+  text-align: center;
+}
+
+.repo-conversations {
+  margin-bottom: 20px;
+}
+
+.current-repo li {
+  border-left: 3px solid #0366d6;
+}
+
+.history-hint {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 10px;
+}

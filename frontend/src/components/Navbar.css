@@ -1,0 +1,62 @@
+.navbar {
+  background-color: #24292e;
+  color: white;
+  padding: 0 20px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.navbar-logo {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a, .navbar-links button {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.nav-user-email {
+  margin-right: 15px;
+  font-size: 14px;
+  color: #9ea7b3;
+}
+
+.nav-button {
+  background-color: transparent;
+  border: 1px solid #444d56;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-button:hover {
+  background-color: #444d56;
+}
+
+.nav-link-button {
+  background-color: #0366d6;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.nav-link-button:hover {
+  background-color: #0256b9;
+}

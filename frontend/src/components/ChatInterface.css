@@ -1,0 +1,118 @@
+.chat-interface {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+/* Message layout */
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+/* Message icon */
+.message-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  background-color: #f0f0f0;
+  flex-shrink: 0;
+}
+
+.message.user {
+  flex-direction: row-reverse;
+}
+
+.message.user .message-icon {
+  margin-left: 8px;
+  margin-right: 0;
+  background-color: #0366d6;
+  color: white;
+}
+
+/* Message content */
+.message-content {
+  padding: 8px 12px;
+  border-radius: 6px;
+  max-width: 85%;
+  background-color: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.message.user .message-content {
+  background-color: #0366d6;
+  color: white;
+  border: none;
+}
+
+/* Chat input */
+.chat-input-form {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #e1e4e8;
+}
+
+.chat-input-form input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.chat-input-form button {
+  padding: 8px 16px;
+  background-color: #0366d6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chat-input-form button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Loading indicator */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.typing-indicator span {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: #777;
+  display: block;
+  margin: 0 2px;
+  animation: typing 1.4s infinite both;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0% { opacity: 0.4; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-5px); }
+  100% { opacity: 0.4; transform: translateY(0); }
+}
